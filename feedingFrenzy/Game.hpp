@@ -11,7 +11,7 @@ public:
 	Game();
 	~Game();
 
-	void Update(float dt);
+	void Update(float dt, sf::RenderWindow *window);
 
 	Fish* getFishes();
 

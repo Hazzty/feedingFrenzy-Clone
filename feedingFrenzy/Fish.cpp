@@ -10,6 +10,7 @@ Fish::Fish()
 	alive = true;
 	size = 1.00f;
 	velocity = 0.5f;
+
 }
 Fish::~Fish()
 {
@@ -26,8 +27,8 @@ sf::Sprite* Fish::getSprite()
 sf::FloatRect Fish::getBounds()
 {
 	sf::FloatRect bound = this->getSprite()->getGlobalBounds();
-	bound.height -= 45.0f;
-	bound.width -= 35.0f;
+	//bound.height -= 45.0f;
+	//bound.width -= 35.0f;
 	return bound;
 }
 bool Fish::setBounds(sf::FloatRect *bounds)

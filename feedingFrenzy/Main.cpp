@@ -18,6 +18,22 @@ int main()
 
 	while (window.isOpen())
 	{
+		/*
+		unsigned int frameCounter = 0;
+		unsigned int frameTime = 0;
+		unsigned int fps = 0;
+		frameCounter++;
+		frameTime += gameTime.getElapsedTime().asMilliseconds();
+		if (frameTime >= 1000)
+		{
+			fps = frameCounter;
+			frameCounter = 0;
+			frameTime -= 1000;
+		}
+		cout << "FPS: " << fps;
+		system("cls");
+		*/
+
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
@@ -25,7 +41,7 @@ int main()
 				window.close();
 		}
 		
-		game.Update(gameTime.restart().asMilliseconds());
+		game.Update(gameTime.restart().asMilliseconds(), &window);
 		
 		sf::Color color(0, 50, 255);
 		window.clear(color);			 

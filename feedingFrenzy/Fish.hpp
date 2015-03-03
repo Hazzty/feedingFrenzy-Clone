@@ -18,8 +18,8 @@ private:
 			velocity;
 	bool alive;
 public:
-	Fish();
 	virtual ~Fish();
+	Fish();
 	bool setTexture(string path);
 	sf::Sprite* getSprite();
 	

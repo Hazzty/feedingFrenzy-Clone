@@ -5,15 +5,15 @@
 
 Game::Game()
 {
-	
-	fishAmount = 3;
-	
+	fishAmount = 10;
+
 	for (int i = 0; i < fishAmount; i++)
 	{
 		fishes.push_back(new Fish());
-		fishes.at(i)->getSprite()->setPosition(600 + i * 50, 200 + i * 50);
+		fishes.at(i)->getSprite()->setPosition(i * 50, i * 50);
 	}
 	player = new Player();
+	player->getSprite()->setOrigin(player->getSprite()->getTexture()->getSize().x / 2, player->getSprite()->getTexture()->getSize().y / 2);
 }
 
 Game::~Game()
@@ -21,7 +21,7 @@ Game::~Game()
 
 }
 
-void Game::Update(float dt)
+void Game::Update(float dt, sf::RenderWindow *window)
 {
 
 	for (int i = 0; i < fishes.size(); i++)
@@ -41,23 +41,32 @@ void Game::Update(float dt)
 		}
 			
 	}
-	
+#pragma region INPUT
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 	{
+		if (player->getSprite()->getPosition().x > 0)
 		player->getSprite()->move(-player->getVelocity() *dt, 0);
-	//s	player->setVelocity(player->getVelocity()+0.02f);
+		player->getSprite()->setRotation(0);
 	}
 		
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
 		player->getSprite()->setRotation(180);
+		if (player->getSprite()->getPosition().x + (player->getSprite()->getTexture()->getSize().x/2) < window->getSize().x)
 		player->getSprite()->move(player->getVelocity() *dt, 0);
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		if (player->getSprite()->getPosition().y < window->getSize().y)
 		player->getSprite()->move(0, player->getVelocity() *dt);
+	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+	{
+		if (player->getSprite()->getPosition().y > 0)
 		player->getSprite()->move(0, -player->getVelocity() *dt);
-	
+
+	}
+#pragma endregion INPUT
 }
 
 void Game::draw(sf::RenderTarget& target, sf::RenderStates states) const

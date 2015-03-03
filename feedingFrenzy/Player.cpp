@@ -4,7 +4,7 @@
 Player::Player() 
 	:Fish()
 {
-	this->setSize(1.0);
+	this->setSize(1.0f);
 	this->health = 3;
 	this->score = 0;
 	this->fishEaten = 0;
@@ -20,6 +20,10 @@ void Player::eat(vector<Fish*> *fishes, int index)
 	this->score += fishes->at(index)->getSize() * 10;
 	this->fishEaten++;
 	fishes->erase(fishes->begin() + index);
+	
+	this->setSize(this->getSize() + 0.1f);
+
+	this->getSprite()->setScale(this->getSize(), this->getSize());
 
 }
 
