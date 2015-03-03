@@ -1,46 +1,49 @@
 #include "Fish.hpp"
 
+#pragma region CONSTRUCTORS/DESTRUCTOR
 Fish::Fish()
 {	
-	texture.loadFromFile("C:/Users/Hampus/Documents/Visual Studio 2013/Projects/feedingFrenzy/Resources/Textures/fish.png");
+	texture.loadFromFile("../Resources/Textures/fish.png");
 	sprite.setTexture(texture);
-	bounds = sprite.getGlobalBounds();
 	sprite.setOrigin(0.5, 0.5);
-	
+	bounds = sprite.getGlobalBounds();
+	alive = true;
 	size = 1.00f;
-	velocity = 2.0f;
+	velocity = 0.5f;
 }
 Fish::~Fish()
 {
 	
-}sf::Sprite* Fish::getSprite()
+}
+#pragma endregion
+
+#pragma region ACCESSORS/MODIFIERS
+sf::Sprite* Fish::getSprite()
 {
 	return &this->sprite;
 }
 
-
-
-bool Fish::setBounds(sf::FloatRect bounds)
-{
-	this->bounds = bounds;
-	return true;
-}
 sf::FloatRect Fish::getBounds()
 {
-	return this->bounds;
+	sf::FloatRect bound = this->getSprite()->getGlobalBounds();
+	bound.height -= 45.0f;
+	bound.width -= 35.0f;
+	return bound;
+}
+bool Fish::setBounds(sf::FloatRect *bounds)
+{
+	this->bounds = *bounds;
+	return 0;
 }
 
 bool Fish::setTexture(string path)
 {
-	sf::Texture texture;
-
 	bool result = true;
 	if (!(texture.loadFromFile(path)))
 		result = false;
-
-	sprite.setTexture(texture);
-	sf::FloatRect boundingBox = sprite.getGlobalBounds();
-
+	texture.setSmooth(true);
+	sprite.setTexture(texture);	
+	
 	return result;
 }
 
@@ -67,3 +70,14 @@ float Fish::getVelocity() const
 {
 	return this->velocity;
 }
+
+bool Fish::setAlive(bool value)
+{
+	if (!(this->alive = value))
+		return false;
+}
+bool Fish::getAlive() const
+{
+	return this->alive;
+}
+#pragma endregion

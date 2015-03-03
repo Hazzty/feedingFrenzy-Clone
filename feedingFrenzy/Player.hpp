@@ -9,7 +9,11 @@ private:
 	int score,
 		fishEaten,
 		health;
+
 public:
+
+	void eat(vector<Fish*> *fishes, int index);
+
 	bool setScore(int value);
 	int getScore() const;
 

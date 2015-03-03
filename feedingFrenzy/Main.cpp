@@ -13,8 +13,8 @@ int main()
 	Game game;
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
 	sf::Clock gameTime;
+	window.setVerticalSyncEnabled(true);
 	
-	Fish* fishes = game.getFishes();
 
 	while (window.isOpen())
 	{

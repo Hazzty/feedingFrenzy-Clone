@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Player.hpp"
+#include <vector>
 
 class Game : public sf::Drawable
 {
@@ -24,7 +25,7 @@ private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 	int fishAmount;
-	Fish* fish;
+	vector<Fish*> fishes;
 	Player* player;
 
 

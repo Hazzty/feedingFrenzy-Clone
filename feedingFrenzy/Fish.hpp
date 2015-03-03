@@ -16,21 +16,25 @@ private:
 	sf::FloatRect bounds;
 	float	size,
 			velocity;
-			
+	bool alive;
 public:
 	Fish();
 	virtual ~Fish();
 	bool setTexture(string path);
 	sf::Sprite* getSprite();
-
-	bool setBounds(sf::FloatRect bounds);
+	
+	bool setBounds(sf::FloatRect *bounds);
 	sf::FloatRect getBounds();
+
 
 	bool setSize(float value);
 	float getSize() const;
 
 	bool setVelocity(float value);
 	float getVelocity() const;
+	
+	bool setAlive(bool value);
+	bool getAlive() const;
 
 };
 

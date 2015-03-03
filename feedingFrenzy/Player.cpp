@@ -1,4 +1,29 @@
 #include "Player.hpp"
+#include <vector>
+#pragma region CONSTRUCTORS/DECONSTRUCTOR
+Player::Player() 
+	:Fish()
+{
+	this->setSize(1.0);
+	this->health = 3;
+	this->score = 0;
+	this->fishEaten = 0;
+}
+Player::~Player()
+{
+
+}
+#pragma endregion 
+
+void Player::eat(vector<Fish*> *fishes, int index)
+{
+	this->score += fishes->at(index)->getSize() * 10;
+	this->fishEaten++;
+	fishes->erase(fishes->begin() + index);
+
+}
+
+#pragma region ACCESSORS/MODIFIERS
 bool Player::setScore(int value)
 {
 	bool result = true;
@@ -34,15 +59,4 @@ int Player::getHealth() const
 {
 	return this->health;
 }
-
-Player::Player() 
-	:Fish()
-{
-	this->health = 3;
-	this->score = 0;
-	this->fishEaten = 0;
-}
-Player::~Player()
-{
-
-}
+#pragma endregion
