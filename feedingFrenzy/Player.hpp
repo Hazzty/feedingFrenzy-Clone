@@ -23,7 +23,7 @@ public:
 	bool setHealth(int value);
 	int getHealth() const;
 
-	Player();
+	Player(float size, float velocity);
 	virtual ~Player();
 };
 

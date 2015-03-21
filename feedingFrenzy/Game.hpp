@@ -8,12 +8,12 @@
 class Game : public sf::Drawable
 {
 public:
-	Game();
+	Game(sf::RenderWindow& window);
 	~Game();
 
 	void Update(float dt, sf::RenderWindow *window);
 
-	Fish* getFishes();
+	Fish* getFishes() const;
 
 	bool setFishAmount(int value);
 	int getFishAmount() const;
@@ -21,13 +21,18 @@ public:
 	bool addFish(Fish* f);
 	bool removeFish(Fish* f);
 
+	sf::View getCamera() const;
+
 private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
 	int fishAmount;
 	vector<Fish*> fishes;
 	Player* player;
-
-
+	sf::View camera;
+	sf::Font font;
+	sf::Text fishEatenText
+		, healthText
+		,scoreText;
 };
 #endif

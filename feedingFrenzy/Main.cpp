@@ -7,11 +7,12 @@
 #include "Player.hpp"
 
 using namespace std;
-#pragma endregion
+#pragma endregion EXTERNALS
 int main()
 {
-	Game game;
+	
 	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+	Game* game = new Game(window);
 	sf::Clock gameTime;
 	window.setVerticalSyncEnabled(true);
 	
@@ -41,11 +42,11 @@ int main()
 				window.close();
 		}
 		
-		game.Update(gameTime.restart().asMilliseconds(), &window);
+		game->Update(gameTime.restart().asMilliseconds(), &window);
 		
 		sf::Color color(0, 50, 255);
 		window.clear(color);			 
-		window.draw(game);
+		window.draw(*game);
 		window.display();
 	}
 

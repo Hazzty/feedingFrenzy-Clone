@@ -1,13 +1,15 @@
 #include "Player.hpp"
 #include <vector>
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
-Player::Player() 
-	:Fish()
+Player::Player(float size, float velocity) 
+	:Fish(size, velocity)
 {
-	this->setSize(1.0f);
+	this->setTexture("../Resources/Textures/Fish/playerFish.png");
+	this->getSprite()->setScale(0.1, 0.1);
 	this->health = 3;
 	this->score = 0;
 	this->fishEaten = 0;
+
 }
 Player::~Player()
 {
@@ -17,11 +19,12 @@ Player::~Player()
 
 void Player::eat(vector<Fish*> *fishes, int index)
 {
-	this->score += fishes->at(index)->getSize() * 10;
+	this->score += fishes->at(index)->getSize() * fishEaten;
 	this->fishEaten++;
 	fishes->erase(fishes->begin() + index);
+	fishes->shrink_to_fit();
 	
-	this->setSize(this->getSize() + 0.1f);
+	this->setSize(this->getSize() + 0.01f);
 
 	this->getSprite()->setScale(this->getSize(), this->getSize());
 

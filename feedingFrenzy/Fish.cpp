@@ -1,16 +1,14 @@
 #include "Fish.hpp"
 
 #pragma region CONSTRUCTORS/DESTRUCTOR
-Fish::Fish()
+Fish::Fish(float size, float velocity)
 {	
-	texture.loadFromFile("../Resources/Textures/fish.png");
-	sprite.setTexture(texture);
-	sprite.setOrigin(0.5, 0.5);
-	bounds = sprite.getGlobalBounds();
-	alive = true;
-	size = 1.00f;
-	velocity = 0.5f;
-
+//	texture.loadFromFile("../Resources/Textures/player.png");
+//	sprite.setTexture(texture);
+	//sprite.setOrigin(0.5, 0.5);
+	//bounds = sprite.getGlobalBounds();
+	this->size = size;
+	this->velocity = velocity;
 }
 Fish::~Fish()
 {
@@ -19,7 +17,7 @@ Fish::~Fish()
 #pragma endregion
 
 #pragma region ACCESSORS/MODIFIERS
-sf::Sprite* Fish::getSprite()
+sf::Sprite* Fish::getSprite() 
 {
 	return &this->sprite;
 }
@@ -70,15 +68,5 @@ bool Fish::setVelocity(float value)
 float Fish::getVelocity() const
 {
 	return this->velocity;
-}
-
-bool Fish::setAlive(bool value)
-{
-	if (!(this->alive = value))
-		return false;
-}
-bool Fish::getAlive() const
-{
-	return this->alive;
 }
 #pragma endregion
