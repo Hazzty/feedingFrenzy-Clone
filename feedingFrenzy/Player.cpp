@@ -1,16 +1,34 @@
 #include "Player.hpp"
 #include <vector>
+
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
-Player::Player(float size, float velocity) 
-	:Fish(size, velocity)
+Player::Player(float size, float velocity)
 {
+	this->setSize(size);
+	this->setVelocity(velocity);
+
 	this->setTexture("../Resources/Textures/Fish/playerFish.png");
 	this->getSprite()->setScale(0.1, 0.1);
-	this->health = 3;
+	this->getSprite()->setOrigin(this->getSprite()->getTexture()->getSize().x / 2, this->getSprite()->getTexture()->getSize().y / 2);
+	this->alive = true;
 	this->score = 0;
 	this->fishEaten = 0;
 
 }
+
+Player::Player()
+{
+	this->setSize(0.2);
+	this->setVelocity(0.2);
+
+	this->setTexture("../Resources/Textures/Fish/playerFish.png");
+	this->getSprite()->setScale(0.1, 0.1);
+	this->getSprite()->setOrigin(this->getSprite()->getTexture()->getSize().x / 2, this->getSprite()->getTexture()->getSize().y / 2);
+	this->alive = true;
+	this->score = 0;
+	this->fishEaten = 0;
+}
+
 Player::~Player()
 {
 
@@ -19,18 +37,38 @@ Player::~Player()
 
 void Player::eat(vector<Fish*> *fishes, int index)
 {
-	this->score += fishes->at(index)->getSize() * fishEaten;
+	this->score += 1 * fishEaten;
 	this->fishEaten++;
 	fishes->erase(fishes->begin() + index);
-	fishes->shrink_to_fit();
 	
-	this->setSize(this->getSize() + 0.01f);
+	if (fishEaten % 10 == 0)
+	{
+		this->setSize(this->getSize() + 0.1f);
+		if (this->getSize() < 1.0f)
+		{
+			if (isFlipped)
+				this->getSprite()->setScale(-this->getSize(), this->getSize());
+			else
+				this->getSprite()->setScale(this->getSize(), this->getSize());
+		}
+	}
+}
 
-	this->getSprite()->setScale(this->getSize(), this->getSize());
-
+void Player::move()
+{
+	//These are not the droids you're looking for.
 }
 
 #pragma region ACCESSORS/MODIFIERS
+void Player::setIsFlipped(bool isFlipped)
+{
+	this->isFlipped = isFlipped;
+}
+bool Player::getIsFlipped() const
+{
+	return this->isFlipped;
+}
+
 bool Player::setScore(int value)
 {
 	bool result = true;
@@ -55,15 +93,12 @@ int Player::getFishEaten() const
 	return this->fishEaten;
 }
 
-bool Player::setHealth(int value)
+void Player::setAlive(bool value)
 {
-	bool result = true;
-	if (!(this->health = value))
-		result = false;
-	return result;
+	this->alive = value;
 }
-int Player::getHealth() const
+bool Player::getAlive() const
 {
-	return this->health;
+	return this->alive;
 }
 #pragma endregion

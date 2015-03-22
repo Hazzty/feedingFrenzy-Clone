@@ -1,120 +1,151 @@
-#include "Game.hpp"
-#include "Player.hpp"
 #include <iostream>
 #include <vector>
+#include "Game.hpp"
+#include "Player.hpp"
 #include "School_Fish.hpp"
+#include "GreyFish.hpp"
 #include "Includes.hpp"
+
+#pragma region CONSTRUCTORS/DECONSTRUCTOR
 
 Game::Game(sf::RenderWindow& window)
 {
-
-
 	fishAmount = 100;
+	fishes.reserve(fishes.size() + 1);
 
 	for (int i = 0; i < fishAmount; i++)
 	{
-		fishes.push_back(new School_Fish(0.09, 1.0));
-		fishes.at(i)->getSprite()->setPosition(rand() % 800+1, rand() % 600 + 1);
+		if (i < fishAmount / 5)
+		{
+			fishes.push_back(new GreyFish());
+		}
+		else
+			fishes.push_back(new School_Fish());
+
+		fishes.back()->getSprite()->setPosition(rand() % window.getSize().x + 1, rand() % window.getSize().y + 1);
 	}
 	player = new Player(0.1, 0.2);
-	player->getSprite()->setOrigin(player->getSprite()->getTexture()->getSize().x / 2, player->getSprite()->getTexture()->getSize().y / 2);
-
+	player->getSprite()->setPosition(rand() % 800 + 1, rand() % 600 + 1);
+	
 #pragma region FONTS
 	if (!font.loadFromFile("../Resources/Fonts/calibri.ttf"))
 		cout << "Failed to load font.";
 
 	fishEatenText.setFont(font);
 	scoreText.setFont(font);
-	healthText.setFont(font);
+	aliveText.setFont(font);
 
-	fishEatenText.setPosition(0,0);
-	scoreText.setPosition(200, 0);
-	healthText.setPosition(300, 0);
+	fishEatenText.setPosition(100, 0);
+	scoreText.setPosition(300, 0);
+	aliveText.setPosition(500, 0);
 
 	fishEatenText.setCharacterSize(24);
 	scoreText.setCharacterSize(24);
-	healthText.setCharacterSize(24);
+	aliveText.setCharacterSize(24);
 
 	fishEatenText.setString("Fish eaten: " + intToStr(player->getFishEaten()));
 	scoreText.setString("Score: " + intToStr(player->getScore()));
-	healthText.setString("Health: " + intToStr(player->getHealth()));
+	aliveText.setString("");
 
 #pragma endregion FONTS
 }
 
 Game::~Game()
 {
-	delete[] &fishes;
+	
+	for (int i = 0; i < fishes.size(); i++)
+		delete fishes.at(i);
+
+	delete player;
 }
+
+#pragma endregion CONSTRUCTORS/DECONSTRUCTOR
 
 void Game::Update(float dt, sf::RenderWindow *window)
 {
-
-#pragma region CAMERA
-	/*camera.reset(sf::FloatRect(200 + (player->getSize() * 50), 200 + (player->getSize() * 50), 300, 200 + (player->getSize() * 50)));
-	camera.setCenter(sf::Vector2f(player->getSprite()->getPosition().x, player->getSprite()->getPosition().y));
-	window->setView(camera);*/
-#pragma endregion CAMERA
 
 #pragma region TEXT
 
 	fishEatenText.setString("Fish eaten: " + intToStr(player->getFishEaten()));
 	scoreText.setString("Score: " + intToStr(player->getScore()));
-	healthText.setString("Health: " + intToStr(player->getHealth()));
+
+	if (!player->getAlive())
+	aliveText.setString("GAME OVER");
 	
 #pragma endregion TEXT
 
 #pragma region GAME LOGIC
-	for (int i = 0; i < fishes.size(); i++)
-	{
-		fishes.at(i)->getSprite()->move(-0.01f*dt, 0);
+	if (player->getAlive() > 0){
 
-		if (fishes.at(i)->getBounds().intersects(player->getBounds()))
+		for (int i = 0; i < fishes.size(); i++)
 		{
-			if (fishes.at(i)->getSize() < player->getSize())
+			fishes.at(i)->move();
+
+			if (fishes.at(i)->getBounds().intersects(player->getBounds()))
 			{
-				player->eat(&fishes, i);
-			
+				if (fishes.at(i)->getSize() <= player->getSize())
+					player->eat(&fishes, i);
+				else
+					player->setAlive(false);
+					
+				std::cout << "Collision" << endl;
 			}
 
-			std::cout << "kollision" << endl;
+			if (fishes.at(i)->getSprite()->getPosition().x < 0)
+			{
+				fishes.erase(fishes.begin() + i);
+				fishes.shrink_to_fit();
+			}
+
 		}
-			
-	}
-	//while (fishes.size() < 50)
-	//{
-	////	fishes.push_back(new School_Fish(1.0, 1.0));
-	////	fishes.at(i)->getSprite()->setPosition(rand() % 800 + 1, rand() % 600 + 1);
-	//}
+		while (fishes.size() < 100)
+		{
+			int fishToSpawn = rand() % 100;
+
+				
+			if(fishToSpawn % 9 == 0)
+				fishes.push_back(new GreyFish());
+			else
+				fishes.push_back(new School_Fish());
+
+
+			fishes.back()->getSprite()->setPosition(window->getSize().x + rand() % 100, rand() % window->getSize().y);
+		}
 
 #pragma endregion GAME LOGIC
 
 #pragma region INPUT
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		//if (player->getSprite()->getPosition().x - (player->getSprite()->getTexture()->getSize().x) > 0)
-		player->getSprite()->move(-player->getVelocity() *dt, 0);
-		player->getSprite()->setRotation(0);
-		//player->getSprite()->setTextureRect(sf::IntRect(player->getSprite()->getTextureRect, 0, -width, height));
-	}
-		
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		player->getSprite()->setRotation(180);
-	//	player->getSprite()->setScale(-1.0f, -1.0f);
-		//if (player->getSprite()->getPosition().x + (player->getSprite()->getTexture()->getSize().x) < window->getSize().x)
-		player->getSprite()->move(player->getVelocity() *dt, 0);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-	{
-	//	if (player->getSprite()->getPosition().y - (player->getSprite()->getTexture()->getSize().y) < window->getSize().y)
-		player->getSprite()->move(0, player->getVelocity() *dt);
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-	{
-	//	if (player->getSprite()->getPosition().y > 0)
-		player->getSprite()->move(0, -player->getVelocity() *dt);
 
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && player->getSprite()->getPosition().x >= 0)
+		{
+			player->getSprite()->move(-player->getVelocity() *dt, 0);
+			if (player->getIsFlipped())
+			{
+				player->getSprite()->setScale(-player->getSprite()->getScale().x, player->getSprite()->getScale().y);
+				player->setIsFlipped(false);
+			}
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && player->getSprite()->getPosition().x <= window->getSize().x)
+		{
+			player->getSprite()->move(player->getVelocity() *dt, 0);
+			if (!player->getIsFlipped())
+			{
+				player->getSprite()->setScale(-player->getSprite()->getScale().x, player->getSprite()->getScale().y);
+				player->setIsFlipped(true);
+			}
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && player->getSprite()->getPosition().y <= window->getSize().y)
+		{
+			player->getSprite()->move(0, player->getVelocity() *dt);
+		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && player->getSprite()->getPosition().y >= 0)
+		{
+			player->getSprite()->move(0, -player->getVelocity() *dt);
+		}
+		
 	}
 #pragma endregion INPUT
 }
@@ -127,7 +158,7 @@ void Game::draw(sf::RenderTarget& target, sf::RenderStates states) const
 		
 	target.draw(fishEatenText, states);
 	target.draw(scoreText, states);
-	target.draw(healthText, states);
+	target.draw(aliveText, states);
 }
 
 #pragma region ACCESSORS/MODIFIERS

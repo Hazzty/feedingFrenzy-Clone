@@ -1,14 +1,9 @@
 #include "Fish.hpp"
 
 #pragma region CONSTRUCTORS/DESTRUCTOR
-Fish::Fish(float size, float velocity)
-{	
-//	texture.loadFromFile("../Resources/Textures/player.png");
-//	sprite.setTexture(texture);
-	//sprite.setOrigin(0.5, 0.5);
-	//bounds = sprite.getGlobalBounds();
-	this->size = size;
-	this->velocity = velocity;
+Fish::Fish()
+{
+
 }
 Fish::~Fish()
 {
@@ -25,8 +20,8 @@ sf::Sprite* Fish::getSprite()
 sf::FloatRect Fish::getBounds()
 {
 	sf::FloatRect bound = this->getSprite()->getGlobalBounds();
-	//bound.height -= 45.0f;
-	//bound.width -= 35.0f;
+	bound.height -= 10.0f;
+	bound.width -= 15.0f;
 	return bound;
 }
 bool Fish::setBounds(sf::FloatRect *bounds)

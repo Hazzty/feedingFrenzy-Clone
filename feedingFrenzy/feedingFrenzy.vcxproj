@@ -94,7 +94,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="School_Fish.cpp" />
-    <ClCompile Include="SwordFish.cpp" />
+    <ClCompile Include="GreyFish.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemy.hpp" />
@@ -103,7 +103,7 @@
     <ClInclude Include="Includes.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="School_Fish.hpp" />
-    <ClInclude Include="SwordFish.hpp" />
+    <ClInclude Include="GreyFish.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

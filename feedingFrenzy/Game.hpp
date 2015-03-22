@@ -29,10 +29,9 @@ private:
 	int fishAmount;
 	vector<Fish*> fishes;
 	Player* player;
-	sf::View camera;
 	sf::Font font;
 	sf::Text fishEatenText
-		, healthText
+		, aliveText
 		,scoreText;
 };
 #endif

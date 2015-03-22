@@ -33,7 +33,7 @@
     <ClCompile Include="School_Fish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SwordFish.cpp">
+    <ClCompile Include="GreyFish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,13 +50,13 @@
     <ClInclude Include="Enemy.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SwordFish.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Includes.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="School_Fish.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GreyFish.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

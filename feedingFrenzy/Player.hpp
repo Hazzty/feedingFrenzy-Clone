@@ -7,12 +7,20 @@ class Player : public Fish
 {
 private:
 	int score,
-		fishEaten,
-		health;
+		fishEaten;
+	bool isFlipped = false,
+		alive;
 
 public:
 
+	Player(float size, float velocity);
+	Player();
+	virtual ~Player();
+
 	void eat(vector<Fish*> *fishes, int index);
+
+	void setIsFlipped(bool isFlipped);
+	bool getIsFlipped() const;
 
 	bool setScore(int value);
 	int getScore() const;
@@ -20,11 +28,11 @@ public:
 	bool setFishEaten(int value);
 	int getFishEaten() const;
 
-	bool setHealth(int value);
-	int getHealth() const;
+	void setAlive(bool value);
+	bool getAlive() const;
 
-	Player(float size, float velocity);
-	virtual ~Player();
+
+	virtual void move(); 
 };
 
 

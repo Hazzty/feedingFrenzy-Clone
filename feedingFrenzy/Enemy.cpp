@@ -1,10 +1,17 @@
 #include "Enemy.hpp"
-Enemy::Enemy(float size, float velocity)
-	:Fish(size, velocity)
-{
-	
-}
 
+#pragma region CONSTRUCTORS/DECONSTRUCTOR
+Enemy::Enemy() : Fish()
+{
+
+}
+Enemy::~Enemy()
+{
+
+}
+#pragma endregion CONSTRUCTORS/DECONSTRUCTOR
+
+#pragma region ACCESSORS/MODIFIERS
 int Enemy::getX() const
 {
 	return this->x;
@@ -22,3 +29,4 @@ void Enemy::setY(int y)
 {
 	this->y = y;
 }
+#pragma endregion ACCESSORS/MODIFIERS

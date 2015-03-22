@@ -7,12 +7,15 @@
 #include "Player.hpp"
 
 using namespace std;
+
 #pragma endregion EXTERNALS
 int main()
 {
-	
-	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML works!");
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	sf::RenderWindow window(sf::VideoMode(1280, 720), "Feeding Frenzy");
+	window.setFramerateLimit(144);
 	Game* game = new Game(window);
+	window.requestFocus();
 	sf::Clock gameTime;
 	window.setVerticalSyncEnabled(true);
 	
@@ -49,6 +52,6 @@ int main()
 		window.draw(*game);
 		window.display();
 	}
-
+	delete game;
 	return 0;
 }

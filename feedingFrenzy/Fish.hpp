@@ -8,11 +8,15 @@
 using namespace std;
 
 #pragma endregion
+
 class Fish
 {
 public:
-	Fish(float size, float velocity);
+	Fish();
 	virtual ~Fish();
+	
+	virtual void move() = 0;
+
 	bool setTexture(string path);
 	sf::Sprite* getSprite();
 	
@@ -27,7 +31,6 @@ public:
 
  
 private:
-	Fish();
 	sf::Sprite sprite;
 	sf::Texture texture;
 	sf::FloatRect bounds;

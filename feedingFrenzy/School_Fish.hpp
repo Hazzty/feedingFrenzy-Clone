@@ -1,8 +1,13 @@
+#ifndef SCHOOL_FISH_HPP
+#define SCHOOL_FISH_HPP
+
 #include "Enemy.hpp"
 class School_Fish : public Enemy
 {
 public:
-	School_Fish(float size, float velocity);
-	virtual void move();
+	School_Fish();
 	virtual ~School_Fish();
+	virtual void move();
 };
+
+#endif
