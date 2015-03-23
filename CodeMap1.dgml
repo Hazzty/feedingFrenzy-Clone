@@ -1,170 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1 @3 @10 Member=(Name=addFish OverloadingParameters=[(Type=&quot;Fish *&quot;)]))" Category="CodeSchema_Method" Bounds="161.896539338806,-152.194734741309,76.89,25.96" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="addFish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @10 Member=(Name=removeFish OverloadingParameters=[(Type=&quot;Fish *&quot;)]))" Category="CodeSchema_Method" Bounds="90.2396061254727,-96.234085781309,96.4838664266666,25.95870208" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="removeFish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @10 Member=(Name=setFishAmount @18))" Category="CodeSchema_Method" Bounds="-149.033460661194,-40.2747347413089,114.84,25.96" DelayedCrossGroupLinksState="Fetched" Label="setFishAmount" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @10 Member=getCamera)" Category="CodeSchema_Method" Bounds="-33.5605719157667,-96.1512427105367,93.8374492266667,25.95870208" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="getCamera" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @10 Member=getFishAmount)" Category="CodeSchema_Method" Bounds="-4.19033423576673,-40.2669006305367,116.779722613333,25.95870208" DelayedCrossGroupLinksState="Fetched" Label="getFishAmount" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @10 Member=getFishes)" Category="CodeSchema_Method" Bounds="-149.037870434527,-96.234085781309,85.4388195466667,25.95870208" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="getFishes" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=(Name=setFishEaten @18))" Category="CodeSchema_Method" Bounds="-124.128589819682,205.326621944358,101.396666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="setFishEaten" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=(Name=setHealth @18))" Category="CodeSchema_Method" Bounds="-18.5699118730151,149.367270904358,86.1126441066667,25.95870208" DelayedCrossGroupLinksState="Fetched" Label="setHealth" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=(Name=setScore @18))" Category="CodeSchema_Method" Bounds="-242.205256486349,149.366621944358,80.8333333333334,25.96" DelayedCrossGroupLinksState="Fetched" Label="setScore" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=getFishEaten)" Category="CodeSchema_Method" Bounds="7.26807684698485,205.326621944358,103.37,25.96" DelayedCrossGroupLinksState="Fetched" Label="getFishEaten" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=getHealth)" Category="CodeSchema_Method" Bounds="-242.208577899682,205.327270904358,88.0833094933333,25.95870208" DelayedCrossGroupLinksState="Fetched" Label="getHealth" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @12 Member=getScore)" Category="CodeSchema_Method" Bounds="-131.371923153015,149.366621944358,82.8066666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="getScore" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @14 Member=move)" Category="CodeSchema_Method" Bounds="146.696008471125,-40.4627255224623,65.39,25.96" DelayedCrossGroupLinksState="Fetched" Label="move" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="(@1 @3 @6 Member=(Name=setX @18))" Category="CodeSchema_Method" Bounds="261.070389053502,98.6329705486732,58.5133333333333,25.96" DelayedCrossGroupLinksState="Fetched" Label="setX" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @6 Member=(Name=setY @18))" Category="CodeSchema_Method" Bounds="261.070389053502,42.6729705486732,58.0699999999999,25.96" DelayedCrossGroupLinksState="Fetched" Label="setY" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @6 Member=getX)" Category="CodeSchema_Method" Bounds="144.997055720168,154.592970548673,60.4866666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="getX" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @6 Member=getY)" Category="CodeSchema_Method" Bounds="54.9537223868351,154.592970548673,60.0433333333334,25.96" DelayedCrossGroupLinksState="Fetched" Label="getY" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @6 Member=move)" Category="CodeSchema_Method" Bounds="235.483722386835,154.592970548673,65.39,25.96" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="move" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @8 Member=(Name=setVelocity OverloadingParameters=[@16]))" Category="CodeSchema_Method" Bounds="-10.914196555511,319.262094202988,93.4251592533333,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="setVelocity" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="(@1 @3 @8 Member=Fish)" Category="CodeSchema_Method" Bounds="197.149167924489,207.356419962988,56.6532,25.95987712" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" Label="Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@11" Category="CodeSchema_Class" Bounds="-2.53750778437299,-135.462725522462,91.9533333333333,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="12" Group="Collapsed" Label="Game" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="-36.1594067112229,147.412474477538,92.99,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="10" Group="Collapsed" Label="Player" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@15" Category="CodeSchema_Class" Bounds="-79.4206581955416,-80.4627255224623,311.506666666667,197.8752" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="School_Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@17" Category="CodeSchema_Method" Bounds="-131.985364128844,263.309257082988,72.42118144,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="setSize" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@19" Category="CodeSchema_Method" Bounds="-131.985364128844,319.262094202988,91.0854587733333,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="setBounds" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-1.23399152887487,-14.5042615224621,155.133333333333,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Collapsed" Label="feedingFrenzy.exe" UseManualLocation="True" />
-    <Node Id="@20" Category="CodeSchema_Method" Bounds="149.103206005473,-208.154734741309,66.9533333333333,25.96" DelayedCrossGroupLinksState="Fetched" Label="Game" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@21" Category="CodeSchema_Method" Bounds="74.8014970978223,263.309257082988,90.8121604266667,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="setTexture" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@22" Category="CodeSchema_Method" Bounds="-149.033460661194,15.6852652586911,117.836666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="__autoclassinit2" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@24" Category="CodeSchema_Method" Bounds="54.9537223868351,42.6729705486732,176.116666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="`scalar deleting destructor'" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@25" Category="CodeSchema_Method" Bounds="-8.94111580884436,151.403582842988,176.104574933333,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="`scalar deleting destructor'" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@26" Category="CodeSchema_Method" Bounds="-149.033460661194,-208.154734741309,176.116666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="`scalar deleting destructor'" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@27" Category="CodeSchema_Method" Bounds="-242.205256486349,37.4466219443581,176.116666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="`scalar deleting destructor'" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@28" Category="CodeSchema_Method" Bounds="-59.4206581955416,-40.4627255224623,176.116666666667,25.96" DelayedCrossGroupLinksState="Fetched" Label="`scalar deleting destructor'" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@30" Category="CodeSchema_Method" Bounds="54.9537223868351,210.552970548673,71.28,25.96" DelayedCrossGroupLinksState="Fetched" Label="Enemy" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@31" Category="CodeSchema_Method" Bounds="197.149167924489,151.403582842988,56.6532,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@32" Category="CodeSchema_Method" Bounds="-36.0918909942977,93.3824355709495,68.0238,25.95870208" DelayedCrossGroupLinksState="Fetched" Label="Player" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@33" Category="CodeSchema_Method" Bounds="-59.4206581955416,71.4524744775376,97.3033333333333,25.96" DelayedCrossGroupLinksState="Fetched" Label="School_Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@34" Category="CodeSchema_Method" Bounds="-36.0918909942977,37.4980934909495,52.50481008,25.95870208" DelayedCrossGroupLinksState="Fetched" Label="eat" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@35" Category="CodeSchema_Method" Bounds="57.0832060054727,-208.154734741309,62.02,25.96" DelayedCrossGroupLinksState="Fetched" Label="draw" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@36" Category="CodeSchema_Method" Bounds="57.0832060054726,-152.194734741309,74.8133333333333,25.96" DelayedCrossGroupLinksState="Fetched" Label="Update" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@37" Category="CodeSchema_Method" Bounds="103.267055720168,98.6329705486732,79.49,25.96" DelayedCrossGroupLinksState="Fetched" Label="~Enemy" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@38" Category="CodeSchema_Method" Bounds="46.6800970978223,207.356419962988,64.86214912,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="~Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@39" Category="CodeSchema_Method" Bounds="-98.5567939945273,-152.194734741309,75.1633333333333,25.96" DelayedCrossGroupLinksState="Fetched" Label="~Game" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Namespace" Bounds="-99.4206581955416,-231.420997522462,351.506666666666,478.833472" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Expanded" Label="‎::" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@40" Category="CodeSchema_Method" Bounds="-192.246923153015,93.4066219443581,76.2,25.96" DelayedCrossGroupLinksState="Fetched" Label="~Player" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@41" Category="CodeSchema_Method" Bounds="-24.1609665288749,15.4972744775377,105.597283333333,25.9552" DelayedCrossGroupLinksState="Fetched" Label="~School_Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@42" Category="CodeSchema_Method" Bounds="-131.985364128844,151.403582842988,93.05853952,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="getBounds" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@43" Category="CodeSchema_Method" Bounds="-29.5784738888443,263.309257082988,74.3942621866667,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="getSize" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@44" Category="CodeSchema_Method" Bounds="-127.585927328844,207.356419962988,84.25966592,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="getSprite" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@45" Category="CodeSchema_Method" Bounds="112.496671497822,319.262094202988,95.39824,25.95987712" DelayedCrossGroupLinksState="Fetched" Label="getVelocity" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@5" Category="CodeSchema_Method" Bounds="12.1450800157792,-191.420997522462,62.140108,25.958272" DelayedCrossGroupLinksState="Fetched" Label="main" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
-    <Node Id="@7" Category="CodeSchema_Class" Bounds="86.8306932887772,147.412474477538,96.28,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Collapsed" Label="Enemy" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
-    <Node Id="@9" Category="CodeSchema_Class" Bounds="17.8330535807688,202.412474477538,81.65,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="12" Group="Collapsed" Label="Fish" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=::)" Category="CodeSchema_Namespace" Bounds="46.4666666666667,10,62.2,25" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="‎::" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="0,-30,155.133333333333,85" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Expanded" Label="feedingFrenzy.exe" UseManualLocation="True" />
   </Nodes>
   <Links>
-    <Link Source="@11" Target="(@1 @3 @10 Member=(Name=addFish OverloadingParameters=[(Type=&quot;Fish *&quot;)]))" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="(@1 @3 @10 Member=(Name=removeFish OverloadingParameters=[(Type=&quot;Fish *&quot;)]))" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="(@1 @3 @10 Member=(Name=setFishAmount @18))" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="(@1 @3 @10 Member=getCamera)" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="(@1 @3 @10 Member=getFishAmount)" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="(@1 @3 @10 Member=getFishes)" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@20" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@22" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@26" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@35" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@36" Category="Contains" FetchingParent="@11" />
-    <Link Source="@11" Target="@39" Category="Contains" FetchingParent="@11" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=(Name=setFishEaten @18))" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=(Name=setHealth @18))" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=(Name=setScore @18))" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=getFishEaten)" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=getHealth)" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="(@1 @3 @12 Member=getScore)" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@27" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@32" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@34" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@40" Category="Contains" FetchingParent="@13" />
-    <Link Source="@15" Target="(@1 @3 @14 Member=move)" Category="Contains" FetchingParent="@15" />
-    <Link Source="@15" Target="@28" Category="Contains" FetchingParent="@15" />
-    <Link Source="@15" Target="@33" Category="Contains" FetchingParent="@15" />
-    <Link Source="@15" Target="@41" Category="Contains" FetchingParent="@15" />
-    <Link Source="@2" Target="@4" Category="Contains" FetchingParent="@2" />
-    <Link Source="@20" Target="@13" Category="References" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@20" Target="@15" Category="References" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@20" Target="@32" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@20" Target="@33" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@20" Target="@44" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@24" Target="@37" Category="CodeSchema_Calls" Bounds="143.012054443359,68.6329727172852,0,21" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@25" Target="@38" Category="CodeSchema_Calls" Bounds="79.1116180419922,177.361083984375,0,20.9975891113281" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@26" Target="@39" Category="CodeSchema_Calls" Bounds="-60.9751281738281,-182.194732666016,0,21" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@27" Target="@40" Category="CodeSchema_Calls" Bounds="-154.146926879883,63.406623840332,0,21" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@28" Target="@41" Category="CodeSchema_Calls" Bounds="28.637674331665,-14.5027256011963,0,21" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@30" Target="@31" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@30" Target="@38" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@32" Target="@21" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@32" Target="@31" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@32" Target="@38" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@19" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@21" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@30" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@37" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@42" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@33" Target="@44" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@34" Target="@17" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@34" Target="@43" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@34" Target="@44" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@35" Target="@44" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@36" Target="@34" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@36" Target="@42" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@36" Target="@43" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@36" Target="@44" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@36" Target="@45" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@37" Target="@38" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@4" Target="@11" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@13" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@15" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@5" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@7" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@9" Category="Contains" FetchingParent="@4" />
-    <Link Source="@40" Target="@38" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@41" Target="@37" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@42" Target="@44" Category="CodeSchema_Calls" Bounds="-85.4596862792969,177.361083984375,0,20.9975891113281" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@5" Target="@20" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@5" Target="@22" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@5" Target="@36" Category="CodeSchema_Calls" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
-    <Link Source="@7" Target="(@1 @3 @6 Member=(Name=setX @18))" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="(@1 @3 @6 Member=(Name=setY @18))" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="(@1 @3 @6 Member=getX)" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="(@1 @3 @6 Member=getY)" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="(@1 @3 @6 Member=move)" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="@24" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="@30" Category="Contains" FetchingParent="@7" />
-    <Link Source="@7" Target="@37" Category="Contains" FetchingParent="@7" />
-    <Link Source="@9" Target="(@1 @3 @8 Member=(Name=setVelocity OverloadingParameters=[@16]))" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="(@1 @3 @8 Member=Fish)" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@17" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@19" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@21" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@25" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@31" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@38" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@42" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@43" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@44" Category="Contains" FetchingParent="@9" />
-    <Link Source="@9" Target="@45" Category="Contains" FetchingParent="@9" />
+    <Link Source="@2" Target="(@1 Namespace=::)" Category="Contains" FetchingParent="@2" />
   </Links>
   <Categories>
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
-    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
-    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
-    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
-    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
     <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
-    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
     <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
-    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
   </Categories>
   <Properties>
     <Property Id="Bounds" DataType="System.Windows.Rect" />
     <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
     <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsExternal" Label="Is External" Description="Flag indicating whether this node is considered external" DataType="System.Boolean" />
     <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
     <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
@@ -188,62 +40,14 @@
     <Property Id="Value" DataType="System.String" />
     <Property Id="ValueLabel" DataType="System.String" />
     <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
-    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
   </Properties>
   <QualifiedNames>
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
-    <Name Id="Member" Label="Member" ValueType="System.Object" />
-    <Name Id="Name" Label="Name" ValueType="System.String" />
     <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
-    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
-    <Name Id="Type" Label="Type" ValueType="System.Object" />
   </QualifiedNames>
   <IdentifierAliases>
     <Alias n="1" Uri="Assembly=$(267d09a0-00d0-43c9-a621-f8b34833e6f2.OutputPathUri)" />
     <Alias n="2" Id="(@1)" />
-    <Alias n="3" Id="Namespace=::" />
-    <Alias n="4" Id="(@1 @3)" />
-    <Alias n="5" Id="(@1 @3 Member=main)" />
-    <Alias n="6" Id="Type=Enemy" />
-    <Alias n="7" Id="(@1 @3 @6)" />
-    <Alias n="8" Id="Type=Fish" />
-    <Alias n="9" Id="(@1 @3 @8)" />
-    <Alias n="10" Id="Type=Game" />
-    <Alias n="11" Id="(@1 @3 @10)" />
-    <Alias n="12" Id="Type=Player" />
-    <Alias n="13" Id="(@1 @3 @12)" />
-    <Alias n="14" Id="Type=School_Fish" />
-    <Alias n="15" Id="(@1 @3 @14)" />
-    <Alias n="16" Id="(Type=float)" />
-    <Alias n="17" Id="(@1 @3 @8 Member=(Name=setSize OverloadingParameters=[@16]))" />
-    <Alias n="18" Id="OverloadingParameters=[(Type=int)]" />
-    <Alias n="19" Id="(@1 @3 @8 Member=(Name=setBounds OverloadingParameters=[(Type=&quot;sf::Rect&lt;float&gt; *&quot;)]))" />
-    <Alias n="20" Id="(@1 @3 @10 Member=(Name=Game OverloadingParameters=[(Type=&quot;sf::RenderWindow &amp;&quot;)]))" />
-    <Alias n="21" Id="(@1 @3 @8 Member=(Name=setTexture OverloadingParameters=[(Type=&quot;std::basic_string&lt;char,std::char_traits&lt;char&gt;,std::allocator&lt;char&gt; &gt;&quot;)]))" />
-    <Alias n="22" Id="(@1 @3 @10 Member=(Name=__autoclassinit2 OverloadingParameters=[(Type=&quot;unsigned int&quot;)]))" />
-    <Alias n="23" Id="Member=(Name=&quot;`scalar deleting destructor'&quot; OverloadingParameters=[(Type=&quot;unsigned int&quot;)])" />
-    <Alias n="24" Id="(@1 @3 @6 @23)" />
-    <Alias n="25" Id="(@1 @3 @8 @23)" />
-    <Alias n="26" Id="(@1 @3 @10 @23)" />
-    <Alias n="27" Id="(@1 @3 @12 @23)" />
-    <Alias n="28" Id="(@1 @3 @14 @23)" />
-    <Alias n="29" Id="OverloadingParameters=[@16,@16]" />
-    <Alias n="30" Id="(@1 @3 @6 Member=(Name=Enemy @29))" />
-    <Alias n="31" Id="(@1 @3 @8 Member=(Name=Fish @29))" />
-    <Alias n="32" Id="(@1 @3 @12 Member=(Name=Player @29))" />
-    <Alias n="33" Id="(@1 @3 @14 Member=(Name=School_Fish @29))" />
-    <Alias n="34" Id="(@1 @3 @12 Member=(Name=eat OverloadingParameters=[(Type=&quot;std::vector&lt;Fish *,std::allocator&lt;Fish *&gt; &gt; *&quot;),(Type=int)]))" />
-    <Alias n="35" Id="(@1 @3 @10 Member=(Name=draw OverloadingParameters=[(Type=&quot;sf::RenderTarget &amp;&quot;),(Type=sf::RenderStates)]))" />
-    <Alias n="36" Id="(@1 @3 @10 Member=(Name=Update OverloadingParameters=[@16,(Type=&quot;sf::RenderWindow *&quot;)]))" />
-    <Alias n="37" Id="(@1 @3 @6 Member=~Enemy)" />
-    <Alias n="38" Id="(@1 @3 @8 Member=~Fish)" />
-    <Alias n="39" Id="(@1 @3 @10 Member=~Game)" />
-    <Alias n="40" Id="(@1 @3 @12 Member=~Player)" />
-    <Alias n="41" Id="(@1 @3 @14 Member=~School_Fish)" />
-    <Alias n="42" Id="(@1 @3 @8 Member=getBounds)" />
-    <Alias n="43" Id="(@1 @3 @8 Member=getSize)" />
-    <Alias n="44" Id="(@1 @3 @8 Member=getSprite)" />
-    <Alias n="45" Id="(@1 @3 @8 Member=getVelocity)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
