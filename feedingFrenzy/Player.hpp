@@ -8,8 +8,7 @@ class Player : public Fish
 private:
 	int score,
 		fishEaten;
-	bool isFlipped = false,
-		alive;
+	bool isFlipped = false;
 
 public:
 
@@ -27,10 +26,6 @@ public:
 
 	bool setFishEaten(int value);
 	int getFishEaten() const;
-
-	void setAlive(bool value);
-	bool getAlive() const;
-
 
 	virtual void move(); 
 };

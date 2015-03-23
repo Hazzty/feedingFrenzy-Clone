@@ -29,6 +29,8 @@ public:
 	bool setVelocity(float value);
 	float getVelocity() const;
 
+	void setAlive(bool value);
+	bool getAlive() const;
  
 private:
 	sf::Sprite sprite;
@@ -36,6 +38,7 @@ private:
 	sf::FloatRect bounds;
 	float	size,
 			velocity;
+	bool alive;
 };
 
 

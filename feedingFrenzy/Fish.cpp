@@ -1,5 +1,5 @@
 #include "Fish.hpp"
-
+#include <iostream>
 #pragma region CONSTRUCTORS/DESTRUCTOR
 Fish::Fish()
 {
@@ -7,7 +7,7 @@ Fish::Fish()
 }
 Fish::~Fish()
 {
-	
+	std::cout << "~Fish()" << endl;
 }
 #pragma endregion
 
@@ -63,5 +63,13 @@ bool Fish::setVelocity(float value)
 float Fish::getVelocity() const
 {
 	return this->velocity;
+}
+void Fish::setAlive(bool value)
+{
+	this->alive = value;
+}
+bool Fish::getAlive() const
+{
+	return this->alive;
 }
 #pragma endregion

@@ -13,16 +13,6 @@ public:
 
 	void Update(float dt, sf::RenderWindow *window);
 
-	Fish* getFishes() const;
-
-	bool setFishAmount(int value);
-	int getFishAmount() const;
-
-	bool addFish(Fish* f);
-	bool removeFish(Fish* f);
-
-	sf::View getCamera() const;
-
 private:
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 

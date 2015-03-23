@@ -1,24 +1,9 @@
-﻿Build started 2015-03-22 15:56:04.
+﻿Build started 2015-03-23 15:32:27.
      1>Project "C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\feedingFrenzy\feedingFrenzy.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\SFML\include\\" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt Game.cpp Player.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\SFML\include\\" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /FR"Debug\\" /Gd /TP /analyze- /errorReport:prompt Player.cpp
          Player.cpp
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(11): warning C4305: 'argument' : truncation from 'double' to 'float'
      1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(12): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(21): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(22): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(25): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\player.cpp(26): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-         Game.cpp
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(25): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(27): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(28): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(56): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(78): warning C4804: '>' : unsafe use of type 'bool' in operation
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(80): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(111): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>c:\users\hampus\documents\visual studio 2013\projects\feedingfrenzy\feedingfrenzy\game.cpp(155): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\Debug\feedingFrenzy.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\SFML\lib\\" "sfml-system-d.lib" "sfml-window-d.lib" "sfml-graphics-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\Debug\feedingFrenzy.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Hampus\documents\visual studio 2013\Projects\feedingFrenzy\Debug\feedingFrenzy.lib" /MACHINE:X86 Debug\Enemy.obj
          Debug\Fish.obj
@@ -34,4 +19,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.74
+Time Elapsed 00:00:02.56

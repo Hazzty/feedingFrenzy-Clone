@@ -11,7 +11,6 @@ using namespace std;
 #pragma endregion EXTERNALS
 int main()
 {
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "Feeding Frenzy");
 	window.setFramerateLimit(144);
 	Game* game = new Game(window);
@@ -53,5 +52,6 @@ int main()
 		window.display();
 	}
 	delete game;
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	return 0;
 }

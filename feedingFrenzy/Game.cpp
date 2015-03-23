@@ -22,10 +22,10 @@ Game::Game(sf::RenderWindow& window)
 		else
 			fishes.push_back(new School_Fish());
 
-		fishes.back()->getSprite()->setPosition(rand() % window.getSize().x + 1, rand() % window.getSize().y + 1);
+		fishes.back()->getSprite()->setPosition((float)(rand() % window.getSize().x + 1), (float)(rand() % window.getSize().y + 1));
 	}
-	player = new Player(0.1, 0.2);
-	player->getSprite()->setPosition(rand() % 800 + 1, rand() % 600 + 1);
+	player = new Player(0.1f, 0.2f);
+	player->getSprite()->setPosition((float)(rand() % 800 + 1), (float)(rand() % 600 + 1));
 	
 #pragma region FONTS
 	if (!font.loadFromFile("../Resources/Fonts/calibri.ttf"))
@@ -52,10 +52,9 @@ Game::Game(sf::RenderWindow& window)
 
 Game::~Game()
 {
-	
-	for (int i = 0; i < fishes.size(); i++)
+	for (unsigned int i = 0; i < fishes.size(); i++)
 		delete fishes.at(i);
-
+	
 	delete player;
 }
 
@@ -75,9 +74,9 @@ void Game::Update(float dt, sf::RenderWindow *window)
 #pragma endregion TEXT
 
 #pragma region GAME LOGIC
-	if (player->getAlive() > 0){
+	if (player->getAlive()){
 
-		for (int i = 0; i < fishes.size(); i++)
+		for (unsigned int i = 0; i < fishes.size(); i++)
 		{
 			fishes.at(i)->move();
 
@@ -91,10 +90,10 @@ void Game::Update(float dt, sf::RenderWindow *window)
 				std::cout << "Collision" << endl;
 			}
 
-			if (fishes.at(i)->getSprite()->getPosition().x < 0)
+			else if (fishes.at(i)->getSprite()->getPosition().x < 0)
 			{
+				delete fishes.at(i);
 				fishes.erase(fishes.begin() + i);
-				fishes.shrink_to_fit();
 			}
 
 		}
@@ -103,19 +102,24 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			int fishToSpawn = rand() % 100;
 
 				
-			if(fishToSpawn % 9 == 0)
+			if (fishToSpawn % 9 == 0)
+			{
 				fishes.push_back(new GreyFish());
+				fishes.shrink_to_fit();
+			}
 			else
+			{
 				fishes.push_back(new School_Fish());
+				fishes.shrink_to_fit();
+			}
 
 
-			fishes.back()->getSprite()->setPosition(window->getSize().x + rand() % 100, rand() % window->getSize().y);
+			fishes.back()->getSprite()->setPosition((float)(window->getSize().x + rand() % 100), (float)(rand() % window->getSize().y));
 		}
 
 #pragma endregion GAME LOGIC
 
 #pragma region INPUT
-
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && player->getSprite()->getPosition().x >= 0)
 		{
 			player->getSprite()->move(-player->getVelocity() *dt, 0);
@@ -146,35 +150,18 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			player->getSprite()->move(0, -player->getVelocity() *dt);
 		}
 		
-	}
 #pragma endregion INPUT
+
+	}
 }
 
 void Game::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	target.draw(*player->getSprite(), states);
-	for (int i = 0; i < fishes.size(); i++)
+	for (unsigned int i = 0; i < fishes.size(); i++)
 		target.draw(*fishes.at(i)->getSprite(), states);
 		
 	target.draw(fishEatenText, states);
 	target.draw(scoreText, states);
 	target.draw(aliveText, states);
 }
-
-#pragma region ACCESSORS/MODIFIERS
-
-
-bool Game::setFishAmount(int value)
-{
-	bool result = true;
-
-	if (!(this->fishAmount = value))
-		result = false;
-	return result;
-}
-int Game::getFishAmount() const
-{
-	return this->fishAmount;
-}
-
-#pragma endregion
