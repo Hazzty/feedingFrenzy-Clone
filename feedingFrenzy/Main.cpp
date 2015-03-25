@@ -1,6 +1,3 @@
-
-#pragma region EXTERNALS
-
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "Game.hpp"
@@ -8,7 +5,7 @@
 
 using namespace std;
 
-#pragma endregion EXTERNALS
+
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "Feeding Frenzy");
@@ -21,22 +18,6 @@ int main()
 
 	while (window.isOpen())
 	{
-		/*
-		unsigned int frameCounter = 0;
-		unsigned int frameTime = 0;
-		unsigned int fps = 0;
-		frameCounter++;
-		frameTime += gameTime.getElapsedTime().asMilliseconds();
-		if (frameTime >= 1000)
-		{
-			fps = frameCounter;
-			frameCounter = 0;
-			frameTime -= 1000;
-		}
-		cout << "FPS: " << fps;
-		system("cls");
-		*/
-
 		sf::Event event;
 		while (window.pollEvent(event))
 		{

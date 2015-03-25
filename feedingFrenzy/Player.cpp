@@ -1,6 +1,7 @@
 #include "Player.hpp"
 #include <vector>
 #include <iostream>
+
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
 Player::Player(float size, float velocity)
 {
@@ -37,18 +38,18 @@ Player::~Player()
 
 void Player::eat(vector<Fish*> *fishes, int index)
 {
-	this->score += 1 * fishEaten;
 	this->fishEaten++;
+	this->score += 1 * fishEaten;
 
 	delete fishes->at(index);
 	fishes->erase(fishes->begin() + index);
 
-	if (fishEaten % 10 == 0)
+	if (fishEaten % 10 == 0) //Grow every 10th fish
 	{
 		this->setSize(this->getSize() + 0.1f);
 		if (this->getSize() < 1.0f)
 		{
-			if (isFlipped)
+			if (isFlipped)	//handle player's facing
 				this->getSprite()->setScale(-this->getSize(), this->getSize());
 			else
 				this->getSprite()->setScale(this->getSize(), this->getSize());

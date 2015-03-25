@@ -1,5 +1,6 @@
 #include "Fish.hpp"
 #include <iostream>
+
 #pragma region CONSTRUCTORS/DESTRUCTOR
 Fish::Fish()
 {
@@ -20,7 +21,7 @@ sf::Sprite* Fish::getSprite()
 sf::FloatRect Fish::getBounds()
 {
 	sf::FloatRect bound = this->getSprite()->getGlobalBounds();
-	bound.height -= 10.0f;
+	bound.height -= 10.0f; 
 	bound.width -= 15.0f;
 	return bound;
 }

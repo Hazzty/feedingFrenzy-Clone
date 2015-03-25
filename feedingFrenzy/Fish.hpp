@@ -15,7 +15,7 @@ public:
 	Fish();
 	virtual ~Fish();
 	
-	virtual void move() = 0;
+	virtual void move() = 0;	
 
 	bool setTexture(string path);
 	sf::Sprite* getSprite();
