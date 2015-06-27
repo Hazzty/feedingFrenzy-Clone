@@ -3,13 +3,13 @@
 
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
 
-School_Fish::School_Fish() : Enemy()
+School_Fish::School_Fish(sf::Texture* texture) : Enemy()
 {
 	this->setSize(0.1);
 	this->setVelocity(0.2 + ((0.1 - 0.3)*((float)rand() / RAND_MAX)) + 0.3);
 	this->setAlive(true);
 	this->getSprite()->setScale(0.05, 0.05);
-	this->setTexture("../Resources/Textures/Fish/redFish.png");
+	this->getSprite()->setTexture(*texture);
 	setBounds(&getBounds());
 
 }

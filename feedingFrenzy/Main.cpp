@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1280, 720), "Feeding Frenzy");
+	sf::RenderWindow window(sf::VideoMode(800, 600), "Feeding Frenzy", sf::Style::Fullscreen);
 	window.setFramerateLimit(144);
 	Game* game = new Game(window);
 	window.requestFocus();

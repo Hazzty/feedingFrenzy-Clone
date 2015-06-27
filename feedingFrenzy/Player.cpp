@@ -20,7 +20,7 @@ Player::Player(float size, float velocity)
 Player::Player()
 {
 	this->setSize(0.2f);
-	this->setVelocity(0.2f);
+	this->setVelocity(0.02f);
 
 	this->setTexture("../Resources/Textures/Fish/playerFish.png");
 	this->getSprite()->setScale(0.1f, 0.1f);
@@ -32,7 +32,6 @@ Player::Player()
 
 Player::~Player()
 {
-	cout << "~Player()" << endl;
 }
 #pragma endregion 
 
@@ -46,7 +45,8 @@ void Player::eat(vector<Fish*> *fishes, int index)
 
 	if (fishEaten % 10 == 0) //Grow every 10th fish
 	{
-		this->setSize(this->getSize() + 0.1f);
+		this->setSize(this->getSize() + 0.1f); 
+		this->setVelocity(this->getVelocity() / 2);
 		if (this->getSize() < 1.0f)
 		{
 			if (isFlipped)	//handle player's facing
@@ -95,4 +95,32 @@ int Player::getFishEaten() const
 {
 	return this->fishEaten;
 }
+
+float Player::getMaxSpeed()
+{
+	return this->maxSpeed;
+}
+void Player::setMaxSpeed(float speed)
+{
+	this->maxSpeed = speed;
+}
+
+float Player::getCurrSpeedX()
+{
+	return this->currSpeedX;
+}
+void Player::setCurrSpeedX(float speed)
+{
+	this->currSpeedX = speed;
+}
+
+float Player::getCurrSpeedY()
+{
+	return this->currSpeedY;
+}
+void Player::setCurrSpeedY(float speed)
+{
+	this->currSpeedY = speed;
+}
+
 #pragma endregion

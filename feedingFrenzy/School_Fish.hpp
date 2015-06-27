@@ -5,7 +5,7 @@
 class School_Fish : public Enemy
 {
 public:
-	School_Fish();
+	School_Fish(sf::Texture* texture);
 	virtual ~School_Fish();
 	virtual void move();
 };

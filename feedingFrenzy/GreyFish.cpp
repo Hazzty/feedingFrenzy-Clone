@@ -2,11 +2,13 @@
 #include <iostream>
 
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
-GreyFish::GreyFish()
+
+
+GreyFish::GreyFish(sf::Texture* texture)
 {
 	this->setVelocity(0.1 + ((0.1 - 0.2)*((float)rand() / RAND_MAX)) + 0.2);
 	this->setSize(0.4);
-	this->setTexture("../Resources/Textures/Fish/greyFish.png");
+	this->getSprite()->setTexture(*texture);
 	this->getSprite()->setScale(-0.3, 0.3);
 	this->setAlive(true);
 	setBounds(&getBounds());
@@ -30,5 +32,8 @@ void GreyFish::move()
 
 	else
 	this->getSprite()->move(-this->getVelocity(), 0);
+	
+	if (i == 1000)
+		i = 0;
 }
 

@@ -6,10 +6,10 @@
 class Enemy : public Fish
 {
 public:
+	virtual void move() = 0;
+	
 	Enemy();
 	virtual  ~Enemy();
-
-	virtual void move() = 0;
 private:
 
 };

@@ -8,15 +8,29 @@ class Player : public Fish
 private:
 	int score,
 		fishEaten;
+	float maxSpeed = 1.0f;
+	float currSpeedX = 0.0f;
+	float currSpeedY = 0.0f;
 	bool isFlipped = false;
 
 public:
+
 
 	Player(float size, float velocity);
 	Player();
 	virtual ~Player();
 
 	void eat(vector<Fish*> *fishes, int index);
+
+	void accelerate(int dir);
+
+	float getCurrSpeedY();
+	void setCurrSpeedY(float speed);
+	float getCurrSpeedX();
+	void setCurrSpeedX(float speed);
+
+	float getMaxSpeed();
+	void setMaxSpeed(float speed);
 
 	void setIsFlipped(bool isFlipped);
 	bool getIsFlipped() const;

@@ -6,7 +6,7 @@
 class GreyFish : public Enemy
 {
 public:
-	GreyFish();
+	GreyFish(sf::Texture* texture);
 	virtual ~GreyFish();
 	virtual void move();
 };
