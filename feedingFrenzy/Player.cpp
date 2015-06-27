@@ -20,7 +20,7 @@ Player::Player(float size, float velocity)
 Player::Player()
 {
 	this->setSize(0.2f);
-	this->setVelocity(0.02f);
+	this->setVelocity(0.01f);
 
 	this->setTexture("../Resources/Textures/Fish/playerFish.png");
 	this->getSprite()->setScale(0.1f, 0.1f);

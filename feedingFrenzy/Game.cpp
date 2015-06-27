@@ -5,19 +5,18 @@
 #include "School_Fish.hpp"
 #include "GreyFish.hpp"
 #include "Includes.hpp"
+
 #pragma region CONSTRUCTORS/DECONSTRUCTOR
 
 sf::Texture texture[2];
 
-
 	Game::Game(sf::RenderWindow& window)
 	{
 
-
-		texture[0].setSmooth(true);
 		texture[0].loadFromFile("../Resources/Textures/Fish/greyFish.png");
-		texture[1].setSmooth(true);
+		texture[0].setSmooth(true);
 		texture[1].loadFromFile("../Resources/Textures/Fish/redFish.png");
+		texture[1].setSmooth(true);
 
 		fishAmount = 100;
 		fishes.reserve(fishes.size() + 1);
@@ -92,15 +91,20 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			player->setFishEaten(0);
 			player->setCurrSpeedX(0.0f);
 			player->setCurrSpeedY(0.0f);
-			player->setVelocity(0.02f);
+			player->setVelocity(0.01f);
 			player->setIsFlipped(false);
 			player->setAlive(true);
 		}
-		if (player->getSprite()->getPosition().x < 0 ||
-			player->getSprite()->getPosition().x > window->getSize().x ||
-			player->getSprite()->getPosition().y < 0 ||
-			player->getSprite()->getPosition().y > window->getSize().y)
-			player->setAlive(false);
+		if (player->getSprite()->getPosition().y < 0)
+			player->getSprite()->setPosition(player->getSprite()->getPosition().x, window->getSize().y);
+		else if (player->getSprite()->getPosition().y > window->getSize().y)
+			player->getSprite()->setPosition(player->getSprite()->getPosition().x, 0);
+		else if (player->getSprite()->getPosition().x < 0)
+			player->getSprite()->setPosition(window->getSize().x, player->getSprite()->getPosition().y);
+		else if (player->getSprite()->getPosition().x > window->getSize().x)
+			player->getSprite()->setPosition(0, player->getSprite()->getPosition().y);
+
+
 			for (unsigned int i = 0; i < fishes.size(); i++) //Move all the fishes and check for collisions
 			{
 				fishes.at(i)->move();
@@ -109,8 +113,8 @@ void Game::Update(float dt, sf::RenderWindow *window)
 				{
 					if (fishes.at(i)->getSize() <= player->getSize())
 						player->eat(&fishes, i);
-					else
-						player->setAlive(false);
+					//else
+						//player->setAlive(false);
 				}
 
 				else if (fishes.at(i)->getSprite()->getPosition().x < 0) // When a fish swims off the screen
@@ -145,11 +149,11 @@ void Game::Update(float dt, sf::RenderWindow *window)
 	#pragma region INPUT
 
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
-				player->getSprite()->setPosition(0, 0);
+				player->getSprite()->setPosition(window->getSize().x / 2, window->getSize().y/2);
 
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 			{
-				if (player->getCurrSpeedX() > -player->getMaxSpeed())
+				if (player->getCurrSpeedY() > -player->getMaxSpeed())
 					player->setCurrSpeedX((player->getCurrSpeedX() - player->getVelocity()));
 				if (player->getIsFlipped())
 				{
@@ -170,9 +174,9 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			}
 			else
 			{
-				if (player->getCurrSpeedX() > 0.0)
+				if (player->getCurrSpeedX() > 0.0f)
 					player->setCurrSpeedX(player->getCurrSpeedX() - player->getVelocity());
-				else if (player->getCurrSpeedX() < 0.0)
+				else if (player->getCurrSpeedX() < 0.0f)
 					player->setCurrSpeedX(player->getCurrSpeedX() + player->getVelocity());
 			}
 

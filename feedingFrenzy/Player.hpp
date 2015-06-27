@@ -8,7 +8,7 @@ class Player : public Fish
 private:
 	int score,
 		fishEaten;
-	float maxSpeed = 1.0f;
+	float maxSpeed = 100.0f;
 	float currSpeedX = 0.0f;
 	float currSpeedY = 0.0f;
 	bool isFlipped = false;
