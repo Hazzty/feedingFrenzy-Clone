@@ -89,8 +89,11 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			player->getSprite()->setScale(0.1f, 0.1f);
 			player->setSize(0.2f);
 			player->setScore(0);
-			player->setCurrSpeedX(0);
-			player->setCurrSpeedY(0);
+			player->setFishEaten(0);
+			player->setCurrSpeedX(0.0f);
+			player->setCurrSpeedY(0.0f);
+			player->setVelocity(0.02f);
+			player->setIsFlipped(false);
 			player->setAlive(true);
 		}
 		if (player->getSprite()->getPosition().x < 0 ||
@@ -108,11 +111,9 @@ void Game::Update(float dt, sf::RenderWindow *window)
 						player->eat(&fishes, i);
 					else
 						player->setAlive(false);
-
-					std::cout << "Collision" << endl;
 				}
 
-				else if (fishes.at(i)->getSprite()->getPosition().x < 0) // When a fish swims of the screen
+				else if (fishes.at(i)->getSprite()->getPosition().x < 0) // When a fish swims off the screen
 				{
 					delete fishes.at(i);
 					fishes.erase(fishes.begin() + i);
@@ -190,9 +191,9 @@ void Game::Update(float dt, sf::RenderWindow *window)
 			}
 			else
 			{
-				if (player->getCurrSpeedY() > 0.0)
+				if (player->getCurrSpeedY() > 0.0f)
 					player->setCurrSpeedY(player->getCurrSpeedY() - player->getVelocity());
-				else if (player->getCurrSpeedY() < 0.0)
+				else if (player->getCurrSpeedY() < 0.0f)
 					player->setCurrSpeedY(player->getCurrSpeedY() + player->getVelocity());
 			}
 			

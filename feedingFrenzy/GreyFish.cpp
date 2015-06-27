@@ -14,9 +14,7 @@ GreyFish::GreyFish(sf::Texture* texture)
 	setBounds(&getBounds());
 }
 GreyFish::~GreyFish()
-{
-	cout << "~GreyFish()" << endl;
-}
+{}
 #pragma endregion CONSTRUCTORS/DECONSTRUCTOR
 
 void GreyFish::move()

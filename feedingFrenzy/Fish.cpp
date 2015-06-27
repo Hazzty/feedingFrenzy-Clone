@@ -7,9 +7,7 @@ Fish::Fish()
 
 }
 Fish::~Fish()
-{
-	std::cout << "~Fish()" << endl;
-}
+{}
 #pragma endregion
 
 #pragma region ACCESSORS/MODIFIERS

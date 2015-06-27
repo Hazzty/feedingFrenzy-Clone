@@ -15,9 +15,7 @@ School_Fish::School_Fish(sf::Texture* texture) : Enemy()
 }
 
 School_Fish::~School_Fish()
-{
-	cout << "~School_Fish()" << endl;
-}
+{}
 #pragma endregion
 
 
