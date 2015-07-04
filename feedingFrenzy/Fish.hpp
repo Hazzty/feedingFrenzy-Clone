@@ -14,12 +14,12 @@ class Fish
 public:
 	Fish();
 	virtual ~Fish();
-	
-	virtual void move() = 0;	
+
+	virtual void move() = 0;
 
 	bool setTexture(string path);
 	sf::Sprite* getSprite();
-	
+
 	bool setBounds(sf::FloatRect *bounds);
 	sf::FloatRect getBounds();
 
@@ -31,13 +31,13 @@ public:
 
 	void setAlive(bool value);
 	bool getAlive() const;
- 
+
 private:
 	sf::Sprite sprite;
 	sf::Texture texture;
 	sf::FloatRect bounds;
 	float	size,
-			velocity;
+		velocity;
 	bool alive;
 };
 

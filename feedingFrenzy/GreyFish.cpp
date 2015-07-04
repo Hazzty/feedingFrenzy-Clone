@@ -6,10 +6,10 @@
 
 GreyFish::GreyFish(sf::Texture* texture)
 {
-	this->setVelocity(0.1 + ((0.1 - 0.2)*((float)rand() / RAND_MAX)) + 0.2);
-	this->setSize(0.4);
+	this->setVelocity(0.1f + ((0.1f - 0.2f)*((float)rand() / RAND_MAX)) + 0.2f);
+	this->setSize(0.4f);
 	this->getSprite()->setTexture(*texture);
-	this->getSprite()->setScale(-0.3, 0.3);
+	this->getSprite()->setScale(-0.3f, 0.3f);
 	this->setAlive(true);
 	setBounds(&getBounds());
 }

@@ -3,12 +3,12 @@
 
 #include "Fish.hpp"
 
-class Player : public Fish 
+class Player : public Fish
 {
 private:
 	int score,
 		fishEaten;
-	float maxSpeed = 100.0f;
+	float maxSpeed = 0.1f;
 	float currSpeedX = 0.0f;
 	float currSpeedY = 0.0f;
 	bool isFlipped = false;
@@ -41,7 +41,7 @@ public:
 	bool setFishEaten(int value);
 	int getFishEaten() const;
 
-	virtual void move(); 
+	virtual void move();
 };
 
 

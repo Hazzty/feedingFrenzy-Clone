@@ -45,7 +45,7 @@ void Player::eat(vector<Fish*> *fishes, int index)
 
 	if (fishEaten % 10 == 0) //Grow every 10th fish
 	{
-		this->setSize(this->getSize() + 0.1f); 
+		this->setSize(this->getSize() + 0.1f);
 		if (this->getSize() < 1.0f)
 		{
 			if (isFlipped)	//handle player's facing
